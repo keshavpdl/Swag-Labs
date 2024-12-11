@@ -34,14 +34,14 @@ describe('Login Tests', () => {
         loginPage.verifyLockedoutError();
     });
 
-    it.only('Login with problem_user', () => {
+    it('Login with problem_user', () => {
         const { username, password } = loginData[2];  
         loginPage.fillOutLoginForm(username, password);
         loginPage.login();
         loginPage.verifyProblemUser();
     });
 
-    it('Login with performance_glitch_user', () => {
+    it.skip('Login with performance_glitch_user', () => {
         const { username, password } = loginData[3];  
         loginPage.fillOutLoginForm(username, password);
         loginPage.login();

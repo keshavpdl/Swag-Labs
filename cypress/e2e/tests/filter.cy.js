@@ -26,7 +26,7 @@ describe('Filter Products', () => {
         inventoryPage.verifyFilterApplied('za');
     });
 
-    it.only('Filter by Price (Low to High)', () => {
+    it('Filter by Price (Low to High)', () => {
         inventoryPage.filterByPriceLowToHigh();
         inventoryPage.verifyFilterApplied('lohi');
     });
