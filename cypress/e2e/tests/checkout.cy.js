@@ -2,7 +2,7 @@ import CartPage from "../pages/cartPage";
 import csv from 'neat-csv';
 import CheckoutPage from "../pages/checkoutPage";
 
-describe('Add to Cart', () => {
+describe('Checkout', () => {
     const cartPage = new CartPage();
     const checkoutPage = new CheckoutPage();
     let loginData = [];
@@ -23,7 +23,7 @@ describe('Add to Cart', () => {
         cy.login(username, password);  // Call the login command
     });
 
-    it('Add products to cart', () => {
+    it('Complete Checkout', () => {
         // Add products to the cart
         cartPage.addToCart('Sauce Labs Onesie');
         cartPage.verifyCartItemCount();

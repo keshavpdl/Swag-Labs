@@ -18,6 +18,7 @@ class CartPage {
                 expect(itemCount).to.be.at.least(1);  // Assert that the item count is greater than or equal to 1
             });
     }
+    
     gotoCartPage() {
         cy.visit('/cart.html')
     }

@@ -3,12 +3,25 @@ class LoginPage {
         cy.visit('/index.html');
     }
 
+    verifyLoginURL(){
+        cy.url().should('include', '/index.html');
+    }
+
+    verifyLoginFieldsPresent(){
+        cy.get('[data-test="username"]').should('be.visible');
+        cy.get('[data-test="password"]').should('be.visible');
+    }
+
+    verifyLoginButtonPresent(){
+        cy.get('#login-button').should('be.visible');
+    }
+
     fillOutLoginForm(username, password) {
         cy.get('[data-test="username"]').type(username);
         cy.get('[data-test="password"]').type(password);
     }
 
-    login() {
+    clickLogin() {
         cy.get('#login-button').click();
     }
 

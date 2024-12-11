@@ -24,10 +24,12 @@ describe('Filter Products', () => {
     it('Filter by Name (Z to A)', () => {
         inventoryPage.filterByNameDesc();
         inventoryPage.verifyFilterApplied('za');
+        inventoryPage.verifyDescendingItems();
     });
 
     it('Filter by Price (Low to High)', () => {
         inventoryPage.filterByPriceLowToHigh();
         inventoryPage.verifyFilterApplied('lohi');
+        inventoryPage.verifyLowtoHigh();
     });
 });
