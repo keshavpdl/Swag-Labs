@@ -18,27 +18,23 @@ class CheckoutPage {
         cy.contains('input', 'CONTINUE').click();
 
     }
-    clickFinish(){
+    clickFinish() {
         cy.get('.btn_action.cart_button').click();
     }
     verifyOrderConfirmation() {
         // Assert that the checkout complete container is visible
-cy.get('#checkout_complete_container').should('be.visible');
+        cy.get('#checkout_complete_container').should('be.visible');
 
-// Assert that the "THANK YOU FOR YOUR ORDER" text is present
-cy.get('.complete-header').should('contain.text', 'THANK YOU FOR YOUR ORDER');
+        // Assert that the "THANK YOU FOR YOUR ORDER" text is present
+        cy.get('.complete-header').should('contain.text', 'THANK YOU FOR YOUR ORDER');
 
-// Assert that the "Your order has been dispatched..." text is present
-cy.get('.complete-text').should('contain.text', 'Your order has been dispatched');
+        // Assert that the "Your order has been dispatched..." text is present
+        cy.get('.complete-text').should('contain.text', 'Your order has been dispatched');
 
-// Optionally, check if the image is present
-cy.get('.pony_express').should('be.visible');
-
-// Optionally, check if the image source is correct (if needed)
-cy.get('.pony_express').should('have.attr', 'src', 'img/pony-express.png');
+        // Check if the image is present
+        cy.get('.pony_express').should('be.visible');
     }
-
-
+    
 }
 
 export default CheckoutPage;

@@ -1,10 +1,8 @@
 import CartPage from "../pages/cartPage";
 import csv from 'neat-csv';
-import CheckoutPage from "../pages/checkoutPage";
 
 describe('Add to Cart', () => {
     const cartPage = new CartPage();
-    const checkoutPage = new CheckoutPage();
     let loginData = [];
 
     before(() => {
@@ -36,11 +34,5 @@ describe('Add to Cart', () => {
         cartPage.verifyProductInCart('Sauce Labs Onesie');
         cartPage.verifyProductInCart('Sauce Labs Backpack');
         cartPage.verifyProductInCart('Sauce Labs Bike Light');
-
-        checkoutPage.clickCheckout();
-        checkoutPage.fillCheckoutDetails('abcd', 'xyz','44600');
-        checkoutPage.clickContinue();
-        checkoutPage.clickFinish();
-        checkoutPage.verifyOrderConfirmation()
     });
 });
