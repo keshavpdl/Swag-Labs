@@ -24,7 +24,7 @@ npx cypress open
 
 ## Reports
 
-After test execution, HTML reports are generated. These can be found in the `<span>reports</span>` directory. To view the reports:
+After test execution, HTML reports are generated. These can be found in the `reports `directory. To view the reports:
 
 1. Run the tests.
-2. Open the report file from the `<span>reports/merged-report.html</span>` directory in any browser.
+2. Open the report file from the `reports/merged-report.html` directory in any browser.
